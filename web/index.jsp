@@ -12,9 +12,9 @@
         <form action="calculate" method="post"> 
     <input type="hidden" name="action" value="add">        
     <label class="center1">Investment Amount:</label>
-    <input class="input1" type="number" name="Amount" min="0" required><br>
+    <input class="input1" type="number" name="Amount" min="0" value="${sessionScope.value2}" required><br>
     <label class="center2">Yearly Interest Rate:</label>
-    <input class="input2" type="number" name="Rate" min="0" step="any" required><br>
+    <input class="input2" type="number" name="Rate" min="0" step="any"value="${sessionScope.value1}" required><br>
     <label class="center3">Number of Years:</label>
     <input class="input3" placeholder="Integer number of years" type="number" name="Years" min="0" required><br>
     

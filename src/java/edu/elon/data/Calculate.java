@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import business.Value;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -65,11 +66,13 @@ public class Calculate extends HttpServlet {
             years = request.getParameter("Years");
                Value value = new Value(amount,rate,years);
         request.setAttribute("value", value);
-        
-          
+        HttpSession session = request.getSession();
+        session.setAttribute("value1", rate);
+        session.setAttribute("value2", amount);
         }
         
      
+        
         getServletContext()
                 .getRequestDispatcher(url)
                 .forward(request, response);
