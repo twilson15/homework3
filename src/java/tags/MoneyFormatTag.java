@@ -1,15 +1,44 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ Copyright Robert Feather, Tyler Wilson
  */
 package tags;
-import javax.servlet.jsp.tagext.*;
+
 import java.text.NumberFormat;
+import java.io.IOException;
+
+import javax.servlet.jsp.JspException;
+import javax.servlet.jsp.JspWriter;
+import javax.servlet.jsp.tagext.TagSupport;
 /**
  *
  * @author rfeather
  */
 public class MoneyFormatTag extends TagSupport{
     NumberFormat fmt = NumberFormat.getCurrencyInstance();
+  
+        private Double number;
+	
+        public void setNumber( double number){
+            this.number=number;
+        }
+    
+    
+   
+    @Override
+	public int doStartTag() throws JspException {
+		
+                
+		try {
+			//Get the writer object for output.
+			JspWriter out = pageContext.getOut();
+
+			//Perform substr operation on string.
+			out.println(fmt.format(number));
+
+		} catch (IOException e) {
+			System.out.print(e);
+		}
+		return SKIP_BODY;
+        }
 }
+

@@ -1,6 +1,6 @@
 /*
 <%-- 
-   Copyright Robert Feather, Kevin Kowalsky
+   Copyright Robert Feather, Kevin Kowalsky, Tyler Wilson
 --%>
  */
 package edu.elon.data;

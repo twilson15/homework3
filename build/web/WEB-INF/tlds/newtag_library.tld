@@ -24,6 +24,10 @@
       <name>moneyFormattag</name>
       <tagclass>tags.MoneyFormatTag</tagclass>
       <info>returns it in money format</info>
+      <attribute>
+      <name>number</name>
+      <rtexprvalue>true</rtexprvalue>
+      </attribute>
     
   </tag>
 </taglib>

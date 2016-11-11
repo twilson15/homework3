@@ -1,8 +1,8 @@
 /*
- Copyright Robert Feather, Kevin Kowalsky
+ Copyright Robert Feather, Kevin Kowalsky, Tyler Wilson
  */
 package business;
-import java.text.NumberFormat;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 /**
@@ -10,7 +10,7 @@ import java.util.ArrayList;
  * @author rfeather
  */
 public class Value implements Serializable {
-    NumberFormat fmt = NumberFormat.getCurrencyInstance();
+ //   NumberFormat fmt = NumberFormat.getCurrencyInstance();
     private String amount;
     private String fAmount;
     private String rate;
@@ -31,7 +31,7 @@ public class Value implements Serializable {
         this.rate = rate;
         this.years = years;
         this.fAmount = amount;
-        this.fAmount = fmt.format(Double.parseDouble(this.fAmount));
+       // this.fAmount = fmt.format(Double.parseDouble(this.fAmount));
         
         //this.amount=fmt.format(this.amount);
     }
@@ -65,7 +65,7 @@ public class Value implements Serializable {
         double tr = Double.parseDouble(rate)/100;
         double t = ta * (Math.pow(1 + (tr), ty));
         
-        total = fmt.format(t);
+        total = Double.toString(t);
      
         
     }
@@ -74,7 +74,7 @@ public class Value implements Serializable {
        double ty = Double.parseDouble(years);
        while ( a <= ty) {
            double t = Double.parseDouble(amount) * (Math.pow(1 + (Double.parseDouble(rate)/100), a));
-           String x = fmt.format(t);
+           String x = Double.toString(t);
            allTotal.add(x);
            a++;
           

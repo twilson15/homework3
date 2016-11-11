@@ -1,6 +1,6 @@
 
 <%-- 
-   Copyright Robert Feather, Kevin Kowalsky
+   Copyright Robert Feather, Kevin Kowalsky, Tyler Wilson
 --%>
 
 
@@ -9,7 +9,7 @@
     GregorianCalendar currentDate = new GregorianCalendar();
     int currentYear = currentDate.get(Calendar.YEAR);
 %>
-<section><p>&copy; Copyright <%= currentYear %> Robert Feather &amp; Kevin Kowalsky</p></section>
+<section><p>&copy; Copyright <%= currentYear %> Robert Feather &amp; Kevin Kowalsky &amp; Tyler Wilson</p></section>
 </body>
 
 </html>

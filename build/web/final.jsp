@@ -1,8 +1,9 @@
 <%-- 
-    Copyright Robert Feather, Kevin Kowalsky
+    Copyright Robert Feather, Kevin Kowalsky, Tyler Wilson
 --%>
 
-
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt" %>
+<%@ taglib prefix="elon" uri= "WEB-INF/tlds/newtag_library.tld"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:import url="/includes/header.html" />
 <section>
@@ -15,8 +16,7 @@
 <span>${value.rate}</span><br>
 <label>Years:</label>
 <span>${value.years}</span><br>
-    <lable>Future Value:</lable>
-        <span><jsp:getProperty name="value" property="total"/></span><br>
+    
         
         <table>
             <tr>
@@ -29,7 +29,7 @@
             
             <tr>
                 <td>${value.index+1}</td>
-                <td>${value.allTotal[value.index2]}</td>
+                <td><elon:moneyFormattag number="${value.allTotal[value.index2]}"/></td>
             </tr>
       
          
@@ -42,9 +42,10 @@
         <footer></footer>
         
     <c:import url="/includes/footer.jsp" />
-        
+    
 
 </section>
+    
     
     
    

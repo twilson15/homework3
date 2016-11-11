@@ -1,6 +1,6 @@
 <%-- 
    <%-- 
-   Copyright Robert Feather, Kevin Kowalsky
+   Copyright Robert Feather, Kevin Kowalsky, Tyler Wilson
 --%>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
