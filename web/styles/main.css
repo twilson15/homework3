@@ -1,0 +1,67 @@
+/*Copyright Robert Feather, Kevin Kowalsky*/
+
+body{
+    
+font-family: PT Sans Pro,sans-serif 
+ 
+ }
+ h1{
+    color: blue;
+    font-size:200%;
+    margin-top: 0px;
+    text-align: center;
+    
+     
+ }
+ body{
+    border-color: blue;
+    border-style: solid;
+    padding-bottom: 10px;
+ }
+
+ footer{
+    border-top: solid;
+    border-color: blue;
+    padding-top: 10px;
+    margin-top: 10px;
+ }
+ input{
+    display: inline-block;
+ }
+ section{
+    text-align: center;
+ }
+ 
+ table{
+     margin-top: 10px;
+     margin-bottom: 10px;
+     margin-left: auto;
+     margin-right: auto;
+ }
+ 
+ .center1{
+     padding-left: 2px;
+ }
+ 
+ .center3{
+     padding-left: 20px;
+ }
+ 
+ .calculateButton{
+     margin-top: 10px;
+     margin-bottom: 10px;
+ }
+ 
+ @Media(max-width: 400px){
+    input{
+      display: block;
+    }
+    
+    body{
+      height: 300px;
+    }
+    
+ }
+    
+    
+
